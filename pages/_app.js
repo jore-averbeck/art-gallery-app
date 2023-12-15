@@ -12,6 +12,10 @@ export default function App({ Component, pageProps }) {
     return <h1>Loading</h1>;
   }
 
+  if (error) {
+    return <h1>Opps....</h1>;
+  }
+
   return (
     <>
       <GlobalStyle />
