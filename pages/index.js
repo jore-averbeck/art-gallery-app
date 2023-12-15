@@ -1,7 +1,6 @@
-export default function HomePage() {
-  return (
-    <div>
-      <h1>Hello from Next.js</h1>
-    </div>
-  );
+import ArtPieces from "@/components/ArtPieces";
+
+export default function HomePage({ data }) {
+  console.log(data);
+  return <div></div>;
 }
