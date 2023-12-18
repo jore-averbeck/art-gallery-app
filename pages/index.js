@@ -1,6 +1,7 @@
 import Spotlight from "@/components/Spotlight";
 
-export default function HomePage({ data }) {
+
+export default function SpotlightPage({ data }) {
   function getRandomInt() {
     return data[Math.floor(Math.random() * data.length)];
   }
@@ -8,6 +9,7 @@ export default function HomePage({ data }) {
   return (
     <div>
       <Spotlight piece={getRandomInt()} />
+      
     </div>
   );
 }
