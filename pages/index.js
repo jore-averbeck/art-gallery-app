@@ -1,7 +1,13 @@
-export default function HomePage() {
+import ArtPieces from "@/components/ArtPieces";
+import { useState } from "react";
+
+export default function HomePage({ data }) {
+  const [pieces, setpieces] = useState(data);
+
+  console.log(pieces);
   return (
     <div>
-      <h1>Hello from Next.js</h1>
+      <ArtPieces pieces={pieces} />
     </div>
   );
 }
