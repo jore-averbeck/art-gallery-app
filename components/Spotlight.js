@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Spotlight({ piece }) {
+export default function Spotlight({ piece, favourites, onToggleFavourites }) {
   return (
     <>
       <Image
@@ -10,6 +10,15 @@ export default function Spotlight({ piece }) {
         alt="Image"
       ></Image>
       <p>{piece.artist}</p>
+      <button onClick={() => onToggleFavourites(piece.slug)}>
+            {favourites.includes(piece.slug) ? "❤️" : "🤍"}
+            {/* <Image
+              src="/assets/heart.svg"
+              width={40}
+              height={40}
+              alt="Heart Icon"
+            /> */}
+          </button>
     </>
   );
 }
