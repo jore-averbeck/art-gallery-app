@@ -1,13 +1,13 @@
-import ArtPieces from "@/components/ArtPieces";
-import { useState } from "react";
+import Spotlight from "@/components/Spotlight";
 
 export default function HomePage({ data }) {
-  const [pieces, setpieces] = useState(data);
+  function getRandomInt() {
+    return data[Math.floor(Math.random() * data.length)];
+  }
 
-  console.log(pieces);
   return (
     <div>
-      <ArtPieces pieces={pieces} />
+      <Spotlight piece={getRandomInt()} />
     </div>
   );
 }

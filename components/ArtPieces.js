@@ -1,13 +1,13 @@
-//import { images } from "@/next.config";
 import ArtPiecePreview from "./ArtPiecePreview";
 
 export default function ArtPieces({ pieces }) {
   return (
-    <ul>
+    <ul style={{ listStyle: "none" }}>
       {pieces.map((piece) => (
-        
-        //<li key={slug}> images={imageSource} name={name} artist={artist} {piece.artist} {}</li>
-        <ArtPiecePreview piece={piece} />
+        <li key={pieces.slug}>
+          {" "}
+          <ArtPiecePreview piece={piece} />
+        </li>
       ))}
     </ul>
   );
